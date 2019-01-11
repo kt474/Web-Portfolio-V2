@@ -117,7 +117,7 @@ body {
 }
 #lefttext {
   padding-left: 25%;
-  padding-top: 28%;
+  padding-top: 23vh;
   text-transform: uppercase;
   font-size: 3.5em;
   font-weight: bolder;
@@ -143,6 +143,9 @@ body {
 #subtitle {
   margin-bottom: -5px;
 }
+a {
+  color: #fff;
+}
 #arrow {
   font-size: 1.8em;
   margin-left: 2px;
@@ -156,7 +159,7 @@ body {
 }
 .arrow {
   padding-left: 55%;
-  padding-top: 40%;
+  padding-top: 32vh;
   font-size: 1.8em;
 }
 #left2 {
@@ -237,6 +240,49 @@ body {
   60% {
     transform: translateY(-10px);
   }
+}
+
+#js {
+  color: #fff;
+}
+#ihtml {
+  margin: 10px;
+}
+#projecticons {
+  font-size: 3em;
+  padding: 10px;
+}
+#icons {
+  margin-right: 2vw;
+  margin-left: 4vw;
+  /* padding-left: 30px; */
+}
+.row1,
+.row3 {
+  padding-right: 6vw;
+}
+.row2 {
+  padding-left: 3vw;
+}
+.meicons {
+  font-size: 3em;
+  padding: 10px;
+}
+.camera,
+.hiking {
+  padding-left: 4vw;
+}
+.pen {
+  padding-right: 6vw;
+}
+/*swup stuff */
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(100px);
 }
 /* ==========================================================================
    Helper classes

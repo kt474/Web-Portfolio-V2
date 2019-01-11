@@ -46,6 +46,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+    <script src="/node_modules/swup/dist/swup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -99,11 +100,36 @@
         </div>
         <div class="col s12 m6 l6" id="right">
           <div id="righttext">
-            <p id="subtitle">About Me</p>
-            <span id="arrow">
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </span>
+            <div id="swup" class="transition-fade">
+              <a href="/aboutme.html"><p id="subtitle">About Me</p></a>
+              <span id="arrow">
+                <i class="fas fa-long-arrow-alt-right"></i>
+              </span>
+            </div>
+            <div class="meicons center-align">
+              <!--row 1-->
+              <i id="icons" class="fas fa-camera-retro camera"></i>
+              <i id="icons" class="fas fa-basketball-ball bball"></i>
+              <i id="icons" class="fas fa-music music"></i>
+              <!--row 2-->
+              <br />
+              <i id="icons" class="fas fa-puzzle-piece puz"></i>
+              <img
+                id="icons"
+                class="cube"
+                src="./img/rubik.png"
+                height="70px"
+              />
+              <i id="icons" class="fas fa-pencil-alt pen"></i>
+              <!--row 3-->
+              <br />
+              <i id="icons" class="fas fa-hiking hiking"></i>
+              <i id="icons" class="fas fa-campground"></i>
+              <i id="icons" class="fas fa-leaf"></i>
+            </div>
           </div>
+
+          <!--end swup-->
         </div>
       </div>
       <div class="row">
@@ -120,16 +146,45 @@
         </div>
         <div class="col s12 m6 l6" id="right2">
           <div id="righttext2">
-            <p id="subtitle">Recent Projects</p>
+            <a href="projects.html"><p id="subtitle">Recent Projects</p></a>
             <span id="arrow">
               <i class="fas fa-long-arrow-alt-right"></i>
             </span>
+            <!-- <img
+              id="projectspic"
+              class="valign-wrapper"
+              src="./img/projects.jpg"
+              height="300px"
+            /> -->
+            <div id="projecticons" class="center-align">
+              <i id="icons" class="fab fa-html5"></i>
+              <i id="icons" class="fab fa-css3-alt"></i>
+              <i id="icons" class="fab fa-js row1"></i> <br />
+              <!--second row-->
+              <i id="icons" class="fab fa-react row2"></i>
+              <i id="icons" class="fab fa-angular"></i>
+              <i id="icons" class="fab fa-vuejs vuepadding"></i> <br />
+              <!--third row-->
+              <i id="icons" class="fab fa-python"></i>
+
+              <img id="icons" src="./img/d3-white.png" height="50px" />
+              <i id="icons" class="fab fa-adobe row1"></i>
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col s12 m6 l6" id="left3"></div>
-        <div class="col s12 m6 l6" id="right3"></div>
+        <div class="col s12 m6 l6" id="right3">
+          <!-- <div id="swup" class="transition-fade">
+            <h1>This is the homepage</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="/aboutme.html">Go to other page</a>
+          </div> -->
+        </div>
       </div>
       <div class="fixed-action-btn">
         <a class="btn-floating btn-large" id="links">
@@ -137,20 +192,33 @@
         </a>
         <ul>
           <li>
-            <a class="btn-floating red"><i class="far fa-envelope"></i></a>
+            <a href="mailto: kt474@cornell.edu" class="btn-floating red"
+              ><i class="far fa-envelope"></i
+            ></a>
           </li>
           <li>
-            <a class="btn-floating orange"
+            <a
+              href="https://www.linkedin.com/"
+              class="btn-floating orange"
+              target="_blank"
               ><i class="fab fa-linkedin-in"></i
             ></a>
           </li>
           <li>
-            <a class="btn-floating purple lighten-2"
+            <a
+              href="https://github.com/kt474"
+              target="_blank"
+              class="btn-floating purple lighten-2"
               ><i class="fab fa-github"></i
             ></a>
           </li>
           <li>
-            <a class="btn-floating blue"><i class="fab fa-instagram"></i></a>
+            <a
+              href="https://www.instagram.com/kevkevkt/?hl=en"
+              target="_blank"
+              class="btn-floating blue"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </li>
         </ul>
       </div>
@@ -165,6 +233,7 @@
         var elems = document.querySelectorAll(".sidenav");
         var instances = M.Sidenav.init(elems);
       });
+
       window.jQuery ||
         document.write(
           '<script src="js/vendor/jquery-3.3.1.min.js"><\/script>'
