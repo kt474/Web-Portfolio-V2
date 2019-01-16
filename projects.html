@@ -1,17 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Kevin Tian</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Compiled and minified CSS -->
+    <!--Materialize css framework-->
+    <!-- google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="/node_modules/swup/dist/swup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 500px)"
+      href="css/mobile.css"
+    />
   </head>
-  <style>
-    body {
-      background: #4357ad;
-    }
-  </style>
+  <!--start of my stuff-->
   <body>
-    <h2>Recent Projects</h2>
+    <div class="" id="main">
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="./img/lemon.jpg" height="200px" />
+            </div>
+            <a href="#user"></a>
+            <a href="#name"
+              ><span class="white-text name" id="name">Kevin Tian </span></a
+            >
+            <a href="mailto: kt474@cornell.edu"
+              ><span class="white-text email" id="email"
+                >kt474@cornell.edu</span
+              ></a
+            >
+          </div>
+        </li>
+        <li>
+          <a href="#!"
+            ><i class="material-icons">cloud</i>First Link With Icon</a
+          >
+        </li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+
+      <div id="sidebar">
+        <button
+          id="menutab"
+          data-target="slide-out"
+          class=" btn-floating btn-large z-depth-4 sidenav-trigger"
+        >
+          <i class="large material-icons" id="icon">navigate_next</i>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6" id="left">
+          <div id="lefttext">
+            <p id="hello">Hello,</p>
+            <p>I'm Kevin</p>
+          </div>
+        </div>
+        <div class="col s12 m6 l6" id="right">
+          <div id="righttext">
+            <div id="swup" class="transition-fade">
+              <a href="/aboutme.html"><p id="subtitle">About Me</p></a>
+              <a href="/aboutme.html"
+                ><span id="arrow">
+                  <i class="fas fa-long-arrow-alt-right"></i> </span
+              ></a>
+              <a href="/aboutme.html">
+                <div class="meicons center-align">
+                  <!--row 1-->
+                  <i id="icons" class="fas fa-camera-retro camera"></i>
+                  <i id="icons" class="fas fa-basketball-ball bball"></i>
+                  <i id="icons" class="fas fa-music music"></i>
+                  <!--row 2-->
+                  <br />
+                  <i id="icons" class="fas fa-puzzle-piece puz"></i>
+                  <img
+                    id="icons"
+                    class="cube"
+                    src="./img/rubik.png"
+                    height="70px"
+                  />
+                  <i id="icons" class="fas fa-pencil-alt pen"></i>
+                  <!--row 3-->
+                  <br />
+                  <i id="icons" class="fas fa-hiking hiking"></i>
+                  <i id="icons" class="fas fa-campground"></i>
+                  <i id="icons" class="fas fa-leaf"></i>
+                </div>
+              </a>
+            </div>
+            <!--end div swup-->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6" id="left2">
+          <div id="lefttext2">
+            <p>
+              Designer & Developer <br />
+              Ithaca, NY
+            </p>
+          </div>
+          <div class="arrow bounce" id="scrollarrow">
+            <i class="fas fa-long-arrow-alt-down"></i>
+          </div>
+        </div>
+        <div class="col s12 m6 l6" id="right2">
+          <div id="righttext2">
+            <a href="index.html"><p id="subtitle">Back</p></a>
+            <span id="arrow"> <i class="fas fa-long-arrow-alt-left"></i> </span>
+            <!-- <img
+              id="projectspic"
+              class="valign-wrapper"
+              src="./img/projects.jpg"
+              height="300px"
+            /> -->
+            <div class="container listcontainer" id="skills">
+              <ul class="collection">
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle blue">code</i>
+                  <p>JavaScript, React.js, Vue.js</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle orange darken-2">web</i>
+                  <p>HTML, CSS</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle green">insert_chart</i>
+                  <p>D3.js, Python, R</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle red">palette</i>
+                  <p>Adobe Photoshop, Illustrator, Xd</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6" id="left3"></div>
+        <div class="col s12 m6 l6" id="right3">
+          <!-- <div id="swup" class="transition-fade">
+            <h1>This is the homepage</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="/aboutme.html">Go to other page</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large" id="links">
+          <i class="fas fa-bars"></i>
+        </a>
+        <ul>
+          <li>
+            <a href="mailto: kt474@cornell.edu" class="btn-floating red"
+              ><i class="far fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/"
+              class="btn-floating orange"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/kt474"
+              target="_blank"
+              class="btn-floating purple lighten-2"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/kevkevkt/?hl=en"
+              target="_blank"
+              class="btn-floating blue"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--end of my stuff-->
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
+      });
+
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.3.1.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function() {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("send", "pageview");
+    </script>
+    <script
+      src="https://www.google-analytics.com/analytics.js"
+      async
+      defer
+    ></script>
   </body>
 </html>

@@ -17,14 +17,14 @@ html {
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -37,8 +37,8 @@ html {
 }
 
 /*
- * A better looking default horizontal rule
- */
+   * A better looking default horizontal rule
+   */
 
 hr {
   display: block;
@@ -50,10 +50,10 @@ hr {
 }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
 
 audio,
 canvas,
@@ -65,8 +65,8 @@ video {
 }
 
 /*
- * Remove default fieldset styles.
- */
+   * Remove default fieldset styles.
+   */
 
 fieldset {
   border: 0;
@@ -75,16 +75,16 @@ fieldset {
 }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+   * Allow only vertical resizing of textareas.
+   */
 
 textarea {
   resize: vertical;
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+     Browser Upgrade Prompt
+     ========================================================================== */
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -94,11 +94,11 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+     Author's custom styles
+     ========================================================================== */
 /* * {
-  font-family: "Karla", sans-serif;
-} */
+    font-family: "Karla", sans-serif;
+  } */
 #main {
   width: 100%;
 }
@@ -117,7 +117,7 @@ body {
 }
 #lefttext {
   padding-left: 12vw;
-  padding-top: 22vh;
+  padding-top: 8vh;
   text-transform: uppercase;
   font-size: 3.5em;
   font-weight: bolder;
@@ -140,15 +140,8 @@ body {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
-
-#hiddendiv {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
 #subtitle {
   margin-bottom: -5px;
-  cursor: pointer;
 }
 a {
   color: #fff;
@@ -156,7 +149,6 @@ a {
 #arrow {
   font-size: 1.8em;
   margin-left: 2px;
-  cursor: pointer;
 }
 #sidebar {
   width: 6%;
@@ -181,10 +173,6 @@ a {
   color: #fff;
   height: 50vh;
   margin-top: -20px;
-  position: relative;
-}
-#right2 > div {
-  position: relative;
 }
 #left3 {
   background: #16425b;
@@ -236,8 +224,8 @@ a {
   animation: bounce 2.5s infinite;
 }
 /* .hidden {
-  visibility: hidden;
-} */
+    visibility: hidden;
+  } */
 @keyframes bounce {
   0%,
   20%,
@@ -263,7 +251,6 @@ a {
 #projecticons {
   font-size: 3em;
   padding: 10px;
-  cursor: pointer;
 }
 #icons {
   margin-right: 2vw;
@@ -300,7 +287,7 @@ html.is-animating .transition-fade {
 
 #abouttext {
   text-transform: none;
-  margin-top: -1.5vh;
+  margin-top: -4.5vh;
 }
 #skills {
   color: #000;
@@ -313,30 +300,26 @@ html.is-animating .transition-fade {
 #containerstyle p {
   padding-top: 7px;
 }
-/* add to mobile.css */
-.collection {
-  border-radius: 10px;
-}
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+     Helper classes
+     ========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+   * Hide visually and from screen readers
+   */
 
 .hidden {
   display: none !important;
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
 
 .visuallyhidden {
   border: 0;
@@ -351,10 +334,10 @@ html.is-animating .transition-fade {
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+   * Extends the .visuallyhidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -368,24 +351,24 @@ html.is-animating .transition-fade {
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+   * Hide visually and from screen readers, but maintain layout
+   */
 
 .invisible {
   visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+   * Clearfix: contain floats
+   *
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    `contenteditable` attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that receive the `clearfix` class.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
 
 .clearfix:before,
 .clearfix:after {
@@ -398,10 +381,10 @@ html.is-animating .transition-fade {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -415,10 +398,10 @@ html.is-animating .transition-fade {
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
 
 @media print {
   *,
@@ -445,9 +428,9 @@ html.is-animating .transition-fade {
   }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
 
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
@@ -462,9 +445,9 @@ html.is-animating .transition-fade {
     border: 1px solid #999;
     page-break-inside: avoid;
   } /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+       * Printing Tables:
+       * http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
   thead {
     display: table-header-group;
   }

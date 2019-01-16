@@ -29,6 +29,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -50,6 +51,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 500px)"
+      href="css/mobile.css"
+    />
   </head>
   <!--start of my stuff-->
   <body>
@@ -102,41 +108,43 @@
           <div id="righttext">
             <div id="swup" class="transition-fade">
               <a href="/aboutme.html"><p id="subtitle">About Me</p></a>
-              <span id="arrow">
-                <i class="fas fa-long-arrow-alt-right"></i>
-              </span>
+              <a href="/aboutme.html"
+                ><span id="arrow">
+                  <i class="fas fa-long-arrow-alt-right"></i> </span
+              ></a>
+              <a href="/aboutme.html">
+                <div class="meicons center-align">
+                  <!--row 1-->
+                  <i id="icons" class="fas fa-camera-retro camera"></i>
+                  <i id="icons" class="fas fa-basketball-ball bball"></i>
+                  <i id="icons" class="fas fa-music music"></i>
+                  <!--row 2-->
+                  <br />
+                  <i id="icons" class="fas fa-puzzle-piece puz"></i>
+                  <img
+                    id="icons"
+                    class="cube"
+                    src="./img/rubik.png"
+                    height="70px"
+                  />
+                  <i id="icons" class="fas fa-pencil-alt pen"></i>
+                  <!--row 3-->
+                  <br />
+                  <i id="icons" class="fas fa-hiking hiking"></i>
+                  <i id="icons" class="fas fa-campground"></i>
+                  <i id="icons" class="fas fa-leaf"></i>
+                </div>
+              </a>
             </div>
-            <div class="meicons center-align">
-              <!--row 1-->
-              <i id="icons" class="fas fa-camera-retro camera"></i>
-              <i id="icons" class="fas fa-basketball-ball bball"></i>
-              <i id="icons" class="fas fa-music music"></i>
-              <!--row 2-->
-              <br />
-              <i id="icons" class="fas fa-puzzle-piece puz"></i>
-              <img
-                id="icons"
-                class="cube"
-                src="./img/rubik.png"
-                height="70px"
-              />
-              <i id="icons" class="fas fa-pencil-alt pen"></i>
-              <!--row 3-->
-              <br />
-              <i id="icons" class="fas fa-hiking hiking"></i>
-              <i id="icons" class="fas fa-campground"></i>
-              <i id="icons" class="fas fa-leaf"></i>
-            </div>
+            <!--end div swup-->
           </div>
-
-          <!--end swup-->
         </div>
       </div>
       <div class="row">
         <div class="col s12 m6 l6" id="left2">
           <div id="lefttext2">
             <p>
-              Designer & Developer <br />
+              Frontend Developer <br />
               Ithaca, NY
             </p>
           </div>
@@ -146,7 +154,8 @@
         </div>
         <div class="col s12 m6 l6" id="right2">
           <div id="righttext2">
-            <a href="projects.html"><p id="subtitle">Recent Projects</p></a>
+            <p id="subtitle">Skills</p>
+
             <span id="arrow">
               <i class="fas fa-long-arrow-alt-right"></i>
             </span>
@@ -156,7 +165,7 @@
               src="./img/projects.jpg"
               height="300px"
             /> -->
-            <div id="projecticons" class="center-align">
+            <div id="projecticons" class="center-align picons">
               <i id="icons" class="fab fa-html5"></i>
               <i id="icons" class="fab fa-css3-alt"></i>
               <i id="icons" class="fab fa-js row1"></i> <br />
@@ -170,7 +179,33 @@
               <img id="icons" src="./img/d3-white.png" height="50px" />
               <i id="icons" class="fab fa-adobe row1"></i>
             </div>
+            <!--end project icons-->
           </div>
+          <div id="hiddendiv">
+            <p id="subtitle">Back</p>
+            <span id="arrow"> <i class="fas fa-long-arrow-alt-left"></i> </span>
+            <div class="container listcontainer" id="skills">
+              <ul class="collection">
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle blue">code</i>
+                  <p>JavaScript, React.js, Vue.js</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle orange darken-2">web</i>
+                  <p>HTML, CSS</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle green">insert_chart</i>
+                  <p>D3.js, Python, R</p>
+                </li>
+                <li class="collection-item avatar" id="containerstyle">
+                  <i class="material-icons circle red">palette</i>
+                  <p>Adobe Photoshop, Illustrator, Xd</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--end hidden div-->
         </div>
       </div>
       <div class="row">

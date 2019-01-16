@@ -4,34 +4,46 @@ document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll(".fixed-action-btn");
   var instances = M.FloatingActionButton.init(elems);
 });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   var elems = document.querySelectorAll(".sidenav");
-//   var instances = M.Sidenav.init(elems);
-// });
-
 $(function() {
   setTimeout(function() {
     $("#scrollarrow").addClass("hidden");
   }, 8000);
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > 80) {
-  //     $("body").addClass("changeColor");
-  //     $("#side").removeClass("sidebar");
-  //     $("#arrow")
-  //       .delay(700)
-  //       .fadeOut(100);
-  //     if ($(this).scrollTop() > 1350) {
-  //       $("body").addClass("changeColor2");
-  //     }
-  //   }
-  //   if ($(this).scrollTop() < 1250) {
-  //     $("body").removeClass("changeColor2");
+});
+// $(document).ready(function() {
+//   $("#right2").click(function() {
+//     $("#righttext2").hide();
+//   });
+//   $("#right2").click(function() {
+//     $("#hiddendiv").show();
+//   });
 
-  //     if ($(this).scrollTop() < 600) {
-  //       $("body").removeClass("changeColor");
-  //       //$("#side").addClass("Hidden");
-  //     }
-  //   }
-  // });
+// });
+$("#hiddendiv").hide();
+// $("#right2").click(function() {
+//   $("#righttext2").fadeToggle();
+// });
+// $("#right2").click(function() {
+//   $("#hiddendiv").toggle();
+// });
+
+// $("#right2").click(function() {
+//   $("#righttext2").fadeToggle(400, function() {
+//     $("#hiddendiv").toggle();
+//   });
+// });
+$("#right2").click(function() {
+  var container = $("#right2"); //Narrow the selector to the container
+  var teaser = $("#righttext2", container);
+  var fullContent = $("#hiddendiv", container);
+
+  //Check to see if the teaser is visible
+  if (teaser.is(":visible")) {
+    teaser.fadeToggle(function() {
+      fullContent.fadeToggle();
+    });
+  } else {
+    fullContent.fadeToggle(function() {
+      teaser.fadeToggle();
+    });
+  }
 });
