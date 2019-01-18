@@ -40,6 +40,8 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <!--scroll out-->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script
@@ -60,14 +62,15 @@
   <!--start of my stuff-->
   <body>
     <div class="" id="main">
+      <!--start slide out nav-->
       <ul id="slide-out" class="sidenav">
         <li>
           <div class="user-view">
             <div class="background">
               <img src="./img/lemon.jpg" height="200px" />
             </div>
-            <a href="#user"></a>
-            <a href="#name"
+
+            <a href=""
               ><span class="white-text name" id="name">Kevin Tian </span></a
             >
             <a href="mailto: kt474@cornell.edu"
@@ -77,17 +80,49 @@
             >
           </div>
         </li>
+        <li><a class="subheader">Resources Used</a></li>
+        <li><div class="divider"></div></li>
         <li>
-          <a href="#!"
-            ><i class="material-icons">cloud</i>First Link With Icon</a
+          <a href="https://materializecss.com/" target="_blank"
+            >Materialize CSS</a
           >
         </li>
-        <li><a href="#!">Second Link</a></li>
+        <li>
+          <a href="https://coolors.co/" target="_blank"
+            >Color Schemes Generator</a
+          >
+        </li>
+        <li>
+          <a href="https://cssgradient.io/" target="_blank"
+            >Gradient Generator</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/gmrchk/swup" target="_blank"
+            >CSS Transitions</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/scroll-out/scroll-out" target="_blank"
+            >CSS Scroll Animations</a
+          >
+        </li>
+        <li><a href="https://fonts.google.com/" target="_blank">Fonts</a></li>
+        <li><a href="https://fontawesome.com/" target="_blank">Icons</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="subheader">Apps Used</a></li>
+        <li>
+          <a href="https://code.visualstudio.com/" target="_blank"
+            >Visual Studio Code</a
+          >
+        </li>
+        <li>
+          <a href="https://www.adobe.com/products/xd.html" target="_blank"
+            >Adobe Xd</a
+          >
+        </li>
       </ul>
-
+      <!--end slide out nav-->
       <div id="sidebar">
         <button
           id="menutab"
@@ -209,17 +244,313 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m6 l6" id="left3"></div>
-        <div class="col s12 m6 l6" id="right3">
-          <!-- <div id="swup" class="transition-fade">
-            <h1>This is the homepage</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a href="/aboutme.html">Go to other page</a>
-          </div> -->
+        <div class="col s12 m6 l6" id="left3">
+          <div class="lefttext3">
+            <p data-scroll id="marginadjust">Recent</p>
+            <p data-scroll>Projects</p>
+            <br />
+            <p data-scroll>D3.js</p>
+            <p data-scroll>React.js</p>
+            <p data-scroll>Other</p>
+          </div>
         </div>
+        <div class="col s12 m6 l6" id="right3">
+          <div class="row" id="projectcards">
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable" id="cardwidth">
+                <a href="./d3/nut/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/nutrition.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    Fast Food Nutrition
+                    <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Fast Food Nutrition<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+                  <p>
+                    A visualization made with D3 that looks at the nutrition and
+                    daily percentages of popular fast food items
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/Nutrition"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/nut/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--start hip hop lyrics-->
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable">
+                <a href="./d3/p1/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/trump.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    Hip Hop Lyrics <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Hip Hop Lyrics<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+                  <p>
+                    Using a dataset taken from fivethirtyeight, this D3
+                    visualization shows how hip hop artists feel about
+                    presidential candidates
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/p1"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/p1/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--start second row of projects-->
+          <div class="row" id="projectcards">
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable">
+                <a href="./d3/p2/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/college.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    American Colleges
+                    <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >American Colleges<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+                  <p>
+                    A D3 visualization that shows statistics and demographics
+                    from the best colleges in the U.S
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/p2"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/p2/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--start pi-->
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable">
+                <a href="./d3/pi/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/pidigits.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    1000 Digits of Pi
+                    <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >1000 Digits of Pi<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+                  <p>
+                    A bar graph that shows the distribution of the first 1000
+                    digits of Pi
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/pi"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/pi/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--start third row of projects-->
+          <div class="row" id="projectcards">
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable">
+                <a href="./d3/deaths/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/deaths.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    Causes of Death
+                    <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Causes of Death<i class="material-icons right"
+                      >close</i
+                    ></span
+                  >
+                  <p>
+                    Different visualizations of the most common causes of death
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/deaths"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/deaths/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--start timer vis-->
+            <div class="col s12 m12 l6">
+              <div class="card grey lighten-2 hoverable">
+                <a href="./d3/timer/index.html" target="_blank">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img
+                      class="activator"
+                      src="/img/timer.png"
+                      height="200px"
+                    />
+                  </div>
+                </a>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    Cube Timer <i class="material-icons right">more_vert</i>
+                  </span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Cube Timer<i class="material-icons right">close</i></span
+                  >
+                  <p>
+                    A timer that can be used for speedsolving the Rubik's cube
+                  </p>
+                  <div class="divider"></div>
+                  <br />
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/timer"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./d3/timer/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end div right3-->
       </div>
       <div class="fixed-action-btn">
         <a class="btn-floating btn-large" id="links">
@@ -264,6 +595,10 @@
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
 
     <script>
+      ScrollOut({
+        /* options */
+        threshold: 0.2
+      });
       document.addEventListener("DOMContentLoaded", function() {
         var elems = document.querySelectorAll(".sidenav");
         var instances = M.Sidenav.init(elems);

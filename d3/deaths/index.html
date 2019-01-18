@@ -1,0 +1,571 @@
+<html>
+<head>
+<link rel = 'shortcut icon' href = 'favi.ico'>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<title>Cause of Death</title>
+<style>
+  *{
+    font-family: 'Work Sans', sans-serif;
+  }
+  svg {
+    /* border: 0.5px solid #ccc; */
+  }
+  rect:hover {
+    opacity: 0.7;
+  }
+  circle:hover {
+    opacity: 0.7;
+  }
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 90px;
+    height: 43px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    background: white;
+    border: 0px;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  path:hover{
+    opacity:0.7;
+  }
+</style>
+</head>
+
+<body>
+  <div id = 'main'>
+  <div id - 'tooltip'></div>
+    <script>
+      var height = 800;
+      var width = 1450;
+      // var element = d3.select('#main').node();
+      // var realWidth = (element.getBoundingClientRect().width);
+      //create svg
+      var svg = d3.select('#main')
+        .append('svg')
+        .attr('height', height)
+        .attr('width', width)
+        .style('background-color', '#F1F0FC');
+      var div = d3.select('body')
+        .append('div')
+        .attr('class', 'tooltip')
+        .style('opacity', 0);
+      //scales
+      var xScale = d3.scaleLinear()
+        .domain([0, 500000])
+        .range([0, 350]);
+      var yScale = d3.scaleLinear()
+        .domain([0,12])
+        .range([580, 100]);
+      var xScale2 = d3.scaleLinear()
+        .domain([1932, 1998])
+        .range([0, 350]);
+      var yScale2 = d3.scaleLinear()
+        .domain([0, 400])
+        .range([580, 100]);
+      var pScale = d3.scaleLinear()
+        .domain([0, 610])
+        .range([400, 0]);
+      svg.append('text')
+        .attr('x', 1130)
+        .attr('y', 125)
+        .text('Heart Disease')
+        .attr('font-size', 12)
+      svg.append('text')
+        .attr('x', 1130)
+        .attr('y', 390)
+        .text('Cancer')
+        .attr('font-size', 12)
+      svg.append('text')
+        .attr('x', 1130)
+        .attr('y', 440)
+        .text('Stroke')
+        .attr('font-size', 12)
+      svg.append('text')
+        .attr('x', 1130)
+        .attr('y', 505)
+        .text('Accident')
+        .attr('font-size', 12)
+      svg.append('text')
+        .attr('x', 1130)
+        .attr('y', 530)
+        .text('Pneumonia')
+        .attr('font-size', 12)
+      svg.append('text')
+        .attr('x', 1145)
+        .attr('y', 555)
+        .text('Diabetes')
+        .attr('font-size', 12)
+      svg.append('g')
+        .attr('transform', 'translate('+ 30 + ',' + '0)')
+        .attr('stroke-width', 3)
+        .style('font-size', 12)
+        .call(d3.axisLeft(yScale).tickValues([0]));
+      svg.append('g')
+        .attr('transform', 'translate(1015,'+ (580) + ')')
+        .attr('stroke-width', 3)
+        .style('font-size', 12)
+        .call(d3.axisBottom(xScale2).ticks(5));
+      svg.append('g')
+        .attr('transform', 'translate('+ 1015 + ',' + '0)')
+        .attr('stroke-width', 3)
+        .style('font-size', 12)
+        .call(d3.axisLeft(yScale2));
+      //title text
+      svg.append('text')
+        .attr('x', 700)
+        .attr('y', 50)
+        .attr('text-anchor','middle')
+        .text('Leading Causes of Death')
+        .attr('font-size', 45)
+        //.attr('font-weight', 'bold');
+      svg.append('text')
+        .attr('x', 40)
+        .attr('y', 85)
+        .attr('font-size', 22)
+        .text('Deaths by Risk Factor, U.S')
+      svg.append('text')
+        .attr('x', 1020)
+        .attr('y', 85)
+        .attr('font-size', 22)
+        .text('Deaths Rates, U.S (Per 100,000)')
+        svg.append('g')
+          .attr('transform', 'translate(30,'+ (580) + ')')
+          .attr('stroke-width', 3)
+          .style('font-size', 12)
+          .call(d3.axisBottom(xScale).ticks(5));
+          svg.append('g')
+            .attr('transform', 'translate('+ 30 + ',' + '0)')
+            .attr('stroke-width', 3)
+            .style('font-size', 12)
+            .call(d3.axisLeft(yScale).tickValues([0]));
+
+      svg.append('circle')
+        .attr('cx',700)
+        .attr('cy', 350)
+        .attr('r', 250)
+        .attr('stroke-width', 6)
+        .attr('stroke', '#405EC6')
+        .attr('fill', 'none');
+      //start smaller circles
+      svg.append('circle')
+        .attr('cx', 613)
+        .attr('cy', 440)
+        .attr('r', Math.sqrt(0.234) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 510)
+        .attr('y', 440)
+        .text('Heart Disease')
+        .attr('font-size', 30);
+      svg.append('text')
+        .attr('x', 570)
+        .attr('y', 470)
+        .text('23.4%')
+        .attr('font-size', 30);
+      svg.append('circle')
+        .attr('cx', 828)
+        .attr('cy', 335)
+        .attr('r', Math.sqrt(.225) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 779)
+        .attr('y', 335)
+        .text('Cancer')
+        .attr('font-size', 30);
+      svg.append('text')
+        .attr('x', 790)
+        .attr('y', 365)
+        .text('22.5%')
+        .attr('font-size', 30);
+      svg.append('circle')
+        .attr('cx', 795)
+        .attr('cy', 510)
+        .attr('r', Math.sqrt(.056) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 763)
+        .attr('y', 510)
+        .text('CLRD')
+        .attr('font-size', 25);
+      svg.append('text')
+        .attr('x', 770)
+        .attr('y', 535)
+        .text('5.6%')
+        .attr('font-size', 25);
+      svg.append('circle')
+        .attr('cx', 545)
+        .attr('cy', 272)
+        .attr('r', Math.sqrt(.052) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 497)
+        .attr('y', 270)
+        .text('Accidents')
+        .attr('font-size', 20);
+      svg.append('text')
+        .attr('x', 530)
+        .attr('y', 290)
+        .text('5.2%')
+        .attr('font-size', 20);
+      svg.append('circle')
+        .attr('cx', 662)
+        .attr('cy', 268)
+        .attr('r', Math.sqrt(.051) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 630)
+        .attr('y', 265)
+        .text('Stroke')
+        .attr('font-size', 20);
+      svg.append('text')
+        .attr('x', 645)
+        .attr('y', 285)
+        .text('5.1%')
+        .attr('font-size', 20);
+      svg.append('circle')
+        .attr('cx', 737)
+        .attr('cy', 192)
+        .attr('r', Math.sqrt(.036) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 695)
+        .attr('y', 190)
+        .text("Alzheimer's")
+        .attr('font-size', 15);
+      svg.append('text')
+        .attr('x', 725)
+        .attr('y', 210)
+        .text('3.6%')
+        .attr('font-size', 15);
+      svg.append('circle')
+        .attr('cx', 600)
+        .attr('cy', 185)
+        .attr('r', Math.sqrt(.029) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 568)
+        .attr('y', 185)
+        .text("Diabetes")
+        .attr('font-size', 15);
+      svg.append('text')
+        .attr('x', 586)
+        .attr('y', 205)
+        .text('2.9%')
+        .attr('font-size', 15);
+      svg.append('circle')
+        .attr('cx', 715)
+        .attr('cy', 560)
+        .attr('r', Math.sqrt(.021) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 687)
+        .attr('y', 555)
+        .text("Influenza &")
+        .attr('font-size', 10);
+      svg.append('text')
+        .attr('x', 687)
+        .attr('y', 565)
+        .text("Pneumonia")
+        .attr('font-size', 10);
+      svg.append('text')
+        .attr('x', 708)
+        .attr('y', 575)
+        .text('2.1%')
+        .attr('font-size', 10);
+      svg.append('circle')
+        .attr('cx', 820)
+        .attr('cy', 180)
+        .attr('r', Math.sqrt(.018) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 802)
+        .attr('y', 175)
+        .text("Kidney")
+        .attr('font-size', 12);
+      svg.append('text')
+        .attr('x', 800)
+        .attr('y', 185)
+        .text("Disease")
+        .attr('font-size', 12);
+      svg.append('text')
+        .attr('x', 812)
+        .attr('y', 195)
+        .text('1.8%')
+        .attr('font-size', 12);
+      svg.append('circle')
+        .attr('cx', 487)
+        .attr('cy', 346)
+        .attr('r', Math.sqrt(.016) * 250)
+        .attr('stroke', '#E4353A')
+        .attr('fill', 'none')
+        .attr('stroke-width', 5)
+      svg.append('text')
+        .attr('x', 467)
+        .attr('y', 345)
+        .text("Suicide")
+        .attr('font-size', 12);
+      svg.append('text')
+        .attr('x', 478)
+        .attr('y', 355)
+        .text('1.6%')
+        .attr('font-size', 12);
+
+      var sum2015 = 0;
+      d3.queue()
+        .defer(d3.csv, 'riskfactor.csv')
+        .defer(d3.csv, 'deathrates.csv')
+        .await(display);
+
+      function display(error, dataset, deathrates){
+        data = dataset;
+        rates = deathrates;
+        //start risk factor vis
+        var result = [];
+        for(var i = 0; i < data.length; i++){
+          if(data[i].Code == 'USA' && data[i].Year == 2016){
+            //console.log(data[i])
+            var x;
+            for(var name in data[i]){
+              x = Math.round(Number(data[i][name]));
+              if(x > 25000){
+                result.push(x)
+                //console.log(result);
+              }
+            }
+          }
+        }
+      result.sort(function(a,b){return b - a});
+      var resultCopy = [];
+      //console.log(resultCopy);
+      //console.log(result);
+      //rectangles
+      for(var j = 0; j < 12; j++){
+        var index = (result[j]);
+        resultCopy.push(index.toLocaleString());
+        svg.append('rect')
+          .attr('x', 32)
+          .attr('y', 119 + j * 40)
+          .attr('width', xScale(result[j]))
+          .attr('height', 20)
+          .attr('fill', '#4AC1FA')
+        svg.append('text')
+          .attr('x', 35)
+          .attr('y', 134 + j * 40)
+          .text(resultCopy[j])
+      }
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 114)
+        .text('High Blood Pressure');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 154)
+        .text('Smoking');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 194)
+        .text('Obesity');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 234)
+        .text('High Blood Sugar');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 274)
+        .text('High Cholesterol');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 314)
+        .text('Air Pollution');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 354)
+        .text('Low Fruit Diet');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 394)
+        .text('Low Physical Activity');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 434)
+        .text('Alcohol Use');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 474)
+        .text('Low Vegetable Diet');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 514)
+        .text('Drug Use');
+      svg.append('text')
+        .attr('x', 35)
+        .attr('y', 554)
+        .text('Bone Mineral Density');
+      //start path stuff
+      var pArray = [];
+      var pArray2 = [];
+      var pArray3 = [];
+      var pArray4 = [];
+      var pArray5 = [];
+      var pArray6 = [];
+      var pArray7 = [];
+
+      for(var m = 0; m < rates.length; m++){
+        if(rates[m].Year > 1931){
+          //console.log(rates[m].Accidents)
+          pArray.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Accidents))] );
+          pArray2.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Cancers))] );
+          pArray3.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Heart))] );
+          pArray4.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Stroke))] );
+          pArray5.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Pneumonia))] );
+          pArray6.push([xScale2(rates[m].Year) + 1016, yScale2(Number(rates[m].Diabetes))] );
+        }
+
+      }
+      //console.log(pArray);
+      var lineGenerator = d3.line();
+      var pathData = lineGenerator(pArray);
+      var pData2 = lineGenerator(pArray2);
+      var pData3 = lineGenerator(pArray3);
+      var pData4 = lineGenerator(pArray4);
+      var pData5 = lineGenerator(pArray5);
+      var pData6 = lineGenerator(pArray6);
+      var pData7 = lineGenerator(pArray7);
+      svg.append('path')
+        .attr('d', pathData)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#2446D7')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Accident: ' + Math.round(pScale(event.clientY)) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+      svg.append('path')
+        .attr('d', pData2)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#F36925')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Cancer: ' + Math.round(pScale(event.clientY) + 20) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+      svg.append('path')
+        .attr('d', pData3)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#27285F')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Heart Disease: ' + Math.round(pScale(event.clientY) + 45) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+      svg.append('path')
+        .attr('d', pData4)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#8256CE')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Stroke: ' + Math.round(pScale(event.clientY)) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+      svg.append('path')
+        .attr('d', pData5)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#00D853')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Pneumonia: ' + Math.round(pScale(event.clientY)) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+      svg.append('path')
+        .attr('d', pData6)
+        .attr('stroke-width', 3)
+        .attr('stroke', '#F43A1C')
+        .attr('fill', 'none')
+        .on('mouseover', function(d, i){
+          div.transition()
+          .duration(1)
+          .style('opacity', 1)
+          div.text('Diabetes: ' +Math.round(pScale(event.clientY)) + ' Deaths')
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on('mouseout', function(d){
+          div.transition()
+          .duration(500)
+          .style('opacity', 0)
+        })
+
+      }
+    </script>
+  </div> <!-- end div main -->
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+* {
+  font-family: "Roboto Slab", serif;
+}
+body {
+  background-color: #5fd5f9;
+}
+#reset {
+  margin-left: 25px;
+}
+#timerdiv {
+  width: 700px;
+  /* border: 1px solid #ccc; */
+  margin: 0 auto;
+  margin-top: 2%;
+}
+#timer {
+  margin-left: 10%;
+}
+h1 {
+  font-size: 200px;
+}
+
+#timelist {
+  margin-top: -250px;
+  height: 600px;
+  width: 300px;
+
+  text-align: center;
+  /* overflow: scroll; */
+}
+/* svg {
+  border: 1px solid #ccc;
+} */
+.bottomGraph {
+  display: block;
+  margin: 0 auto;
+  margin-top: -380px;
+}
+.scramble {
+  display: block;
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+  padding-left: 14%;
+}
+.stats {
+  margin-top: -620px;
+  float: right;
+  font-size: 40px;
+}
+li {
+  font-size: 35px;
+}
+ol {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+#label {
+  margin-left: 20px;
+
+  margin-top: 50px;
+  font-size: 40px;
+}

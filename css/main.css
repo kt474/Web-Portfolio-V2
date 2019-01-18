@@ -149,6 +149,7 @@ body {
 #subtitle {
   margin-bottom: -5px;
   cursor: pointer;
+  font-size: 1em;
 }
 a {
   color: #fff;
@@ -167,7 +168,7 @@ a {
 }
 .arrow {
   padding-left: 55%;
-  padding-top: 33.5vh;
+  padding-top: 32.5vh;
   font-size: 1.8em;
 }
 #left2 {
@@ -192,6 +193,10 @@ a {
   height: 100vh;
   margin-top: -20px;
 }
+
+.listcontainer {
+  cursor: pointer;
+}
 #right3 {
   background: rgb(254, 127, 45);
   background: linear-gradient(
@@ -201,7 +206,7 @@ a {
   );
 
   color: #fff;
-  height: 150vh;
+  height: 200vh;
   margin-top: -20px;
 }
 #menutab {
@@ -317,6 +322,49 @@ html.is-animating .transition-fade {
 .collection {
   border-radius: 10px;
 }
+
+[data-scroll] {
+  transition: all 2.5s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+.lefttext3 {
+  margin-left: 12vw;
+  margin-top: 10vh;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-weight: bolder;
+}
+#marginadjust {
+  margin-bottom: -50px;
+}
+#projectcards {
+  margin-top: 8vh;
+}
+.card {
+  border-radius: 5px;
+}
+.card-image {
+  border-radius: 5px;
+}
+.card-reveal {
+  color: #000;
+}
+#linkleft {
+  margin-left: 15px;
+}
+#push {
+  margin-left: -15px;
+}
+/* #cardwidth {
+  width: 280px;
+} */
 /* ==========================================================================
    Helper classes
    ========================================================================== */
