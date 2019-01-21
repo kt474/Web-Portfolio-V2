@@ -49,6 +49,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="/node_modules/swup/dist/swup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="css/normalize.css" />
@@ -120,6 +121,10 @@
           <a href="https://www.adobe.com/products/xd.html" target="_blank"
             >Adobe Xd</a
           >
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <a href="./website/index.html" target="_blank">Web Portfolio V1</a>
         </li>
       </ul>
       <!--end slide out nav-->
@@ -243,48 +248,30 @@
           <!--end hidden div-->
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="footerfix">
         <div class="col s12 m6 l6" id="left3">
           <div class="lefttext3">
             <p data-scroll id="marginadjust">Recent</p>
             <p data-scroll>Projects</p>
-            <br />
+            <!-- <br />
             <p data-scroll>D3.js</p>
             <p data-scroll>React.js</p>
-            <p data-scroll>Other</p>
+            <p data-scroll>Other</p> -->
           </div>
         </div>
         <div class="col s12 m6 l6" id="right3">
           <div class="row" id="projectcards">
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable" id="cardwidth">
-                <a href="./d3/nut/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/nutrition.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable" id="cardwidth">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Fast Food Nutrition
-                    <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title "> Fast Food Nutrition </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >Fast Food Nutrition<i class="material-icons right"
-                      >close</i
-                    ></span
-                  >
+                <div class="card-action">
                   <p>
                     A visualization made with D3 that looks at the nutrition and
                     daily percentages of popular fast food items
                   </p>
-                  <div class="divider"></div>
-                  <br />
+                  <!-- <div class="divider"></div> -->
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -306,34 +293,15 @@
             </div>
             <!--start hip hop lyrics-->
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable">
-                <a href="./d3/p1/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/trump.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Hip Hop Lyrics <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title"> Hip Hop Lyrics </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >Hip Hop Lyrics<i class="material-icons right"
-                      >close</i
-                    ></span
-                  >
+                <div class="card-action">
                   <p>
-                    Using a dataset taken from fivethirtyeight, this D3
-                    visualization shows how hip hop artists feel about
+                    A D3 visualization that shows how hip hop artists feel about
                     presidential candidates
                   </p>
-                  <div class="divider"></div>
-                  <br />
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -357,34 +325,16 @@
           <!--start second row of projects-->
           <div class="row" id="projectcards">
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable">
-                <a href="./d3/p2/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/college.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    American Colleges
-                    <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title"> American Colleges </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >American Colleges<i class="material-icons right"
-                      >close</i
-                    ></span
-                  >
+                <div class="card-action">
                   <p>
                     A D3 visualization that shows statistics and demographics
                     from the best colleges in the U.S
                   </p>
-                  <div class="divider"></div>
-                  <br />
+
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -406,34 +356,16 @@
             </div>
             <!--start pi-->
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable">
-                <a href="./d3/pi/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/pidigits.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    1000 Digits of Pi
-                    <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title"> 1000 Digits of Pi </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >1000 Digits of Pi<i class="material-icons right"
-                      >close</i
-                    ></span
-                  >
+                <div class="card-action">
                   <p>
-                    A bar graph that shows the distribution of the first 1000
-                    digits of Pi
+                    A bar graph animation made with D3 that shows the
+                    distribution of the first 1000 digits of Pi
                   </p>
-                  <div class="divider"></div>
-                  <br />
+
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -457,33 +389,15 @@
           <!--start third row of projects-->
           <div class="row" id="projectcards">
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable">
-                <a href="./d3/deaths/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/deaths.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Causes of Death
-                    <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title"> Causes of Death </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >Causes of Death<i class="material-icons right"
-                      >close</i
-                    ></span
-                  >
-                  <p>
+                <div class="card-action">
+                  <p id="pushtop">
                     Different visualizations of the most common causes of death
                   </p>
-                  <div class="divider"></div>
-                  <br />
+
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -505,30 +419,15 @@
             </div>
             <!--start timer vis-->
             <div class="col s12 m12 l6">
-              <div class="card grey lighten-2 hoverable">
-                <a href="./d3/timer/index.html" target="_blank">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img
-                      class="activator"
-                      src="/img/timer.png"
-                      height="200px"
-                    />
-                  </div>
-                </a>
+              <div class="card hoverable">
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">
-                    Cube Timer <i class="material-icons right">more_vert</i>
-                  </span>
+                  <span class="card-title"> Cube Timer </span>
                 </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >Cube Timer<i class="material-icons right">close</i></span
-                  >
-                  <p>
+                <div class="card-action">
+                  <p id="pushtop">
                     A timer that can be used for speedsolving the Rubik's cube
                   </p>
-                  <div class="divider"></div>
-                  <br />
+
                   <h6 class="center-align">
                     <span id="push">GitHub:</span>
                     <a
@@ -543,6 +442,119 @@
                       target="_blank"
                       class="btn-floating yellow darken-3"
                       ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--start fourth row-->
+          <div class="row" id="projectcards">
+            <div class="col s12 m12 l6">
+              <div class="card hoverable">
+                <div class="card-content">
+                  <span class="card-title"> Weather Search </span>
+                </div>
+                <div class="card-action">
+                  <p id="pushtop">
+                    A React application that uses an API to show the temperature
+                    and weather conditions of any city
+                  </p>
+
+                  <h6 class="center-align">
+                    <span>Link:</span>
+                    <a
+                      href="https://weatherapi-project.herokuapp.com/"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="fab fa-react"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--start recipe app-->
+            <div class="col s12 m12 l6">
+              <div class="card hoverable">
+                <div class="card-content">
+                  <span class="card-title"> Recipe Search</span>
+                </div>
+                <div class="card-action">
+                  <p id="pushtop">
+                    A React application that uses the Food2Fork API to show
+                    recipes from around the world
+                  </p>
+
+                  <h6 class="center-align">
+                    <span>Link:</span>
+                    <a
+                      href="https://recipeapi-search.herokuapp.com/"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="fab fa-react"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--start fifth row of other projects-->
+          <div class="row" id="projectcards">
+            <div class="col s12 m12 l6">
+              <div class="card hoverable">
+                <div class="card-content">
+                  <span class="card-title"> Phaser Platformer </span>
+                </div>
+                <div class="card-action">
+                  <p id="pushtop">
+                    A simple platform game made with the Phaser HTML framework
+                  </p>
+
+                  <h6 class="center-align">
+                    <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/PhaserGame/tree/master/start"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <span id="linkleft">Link:</span>
+                    <a
+                      href="./start/index.html"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-chart-bar"></i
+                    ></a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!--start article -->
+            <div class="col s12 m12 l6">
+              <div class="card hoverable">
+                <div class="card-content">
+                  <span class="card-title"> AI & Sports </span>
+                </div>
+                <div class="card-action">
+                  <p id="pushtop">
+                    An written piece about the role of artificial intelligence
+                    in sports. Artwork designed with Adobe Illustrator
+                  </p>
+
+                  <h6 class="center-align">
+                    <!-- <span id="push">GitHub:</span>
+                    <a
+                      href="https://github.com/kt474/D3-Projects/tree/master/timer"
+                      target="_blank"
+                      class="btn-floating purple lighten-2"
+                      ><i class="fab fa-github"></i
+                    ></a> -->
+                    <span>Link:</span>
+                    <a
+                      href="./img/FinalArticle.pdf"
+                      target="_blank"
+                      class="btn-floating yellow darken-3"
+                      ><i class="far fa-newspaper"></i
                     ></a>
                   </h6>
                 </div>
@@ -589,43 +601,22 @@
         </ul>
       </div>
     </div>
-
-    <!--end of my stuff-->
-
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-
-    <script>
-      ScrollOut({
-        /* options */
-        threshold: 0.2
-      });
-      document.addEventListener("DOMContentLoaded", function() {
-        var elems = document.querySelectorAll(".sidenav");
-        var instances = M.Sidenav.init(elems);
-      });
-
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-3.3.1.min.js"><\/script>'
-        );
-    </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga = function() {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("send", "pageview");
-    </script>
-    <script
-      src="https://www.google-analytics.com/analytics.js"
-      async
-      defer
-    ></script>
   </body>
+  <!--end of my stuff-->
+  <!-- <footer class="page-footer"><p>This is a footer</p></footer> -->
+  <script>
+    ScrollOut({
+      /* options */
+      threshold: 0.2
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".sidenav");
+      var instances = M.Sidenav.init(elems);
+    });
+
+    window.jQuery ||
+      document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>');
+  </script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </html>

@@ -105,7 +105,7 @@ textarea {
 body {
   background: #16425b;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   #sidebar {
     display: none;
   }
@@ -160,8 +160,8 @@ a {
   cursor: pointer;
 }
 #sidebar {
-  width: 6%;
-  height: 1200px;
+  width: 5vw;
+  height: 200vh;
   background: #ffca3a;
   float: left;
   position: fixed;
@@ -206,15 +206,16 @@ a {
   );
 
   color: #fff;
-  height: 200vh;
+  height: 100vh;
   margin-top: -20px;
+  overflow-y: auto;
 }
 #menutab {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-top: 47.5vh;
-  margin-left: 4.2vw;
+  margin-left: 3.15vw;
   background: #fff;
 }
 #icon {
@@ -347,15 +348,17 @@ html.is-animating .transition-fade {
 #projectcards {
   margin-top: 8vh;
 }
+.card-action {
+  margin-top: -20px;
+}
+.card-action p {
+  margin-top: 0px;
+}
 .card {
-  border-radius: 5px;
-}
-.card-image {
-  border-radius: 5px;
-}
-.card-reveal {
   color: #000;
+  height: 250px;
 }
+
 #linkleft {
   margin-left: 15px;
 }
@@ -365,6 +368,31 @@ html.is-animating .transition-fade {
 /* #cardwidth {
   width: 280px;
 } */
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+#pushtop {
+  margin-bottom: 25px;
+}
+#foot {
+  background: red;
+  position: absolute;
+  bottom: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+#footerfix {
+  margin-bottom: 0px;
+}
+.page-footer {
+  background: #ffca3a;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
